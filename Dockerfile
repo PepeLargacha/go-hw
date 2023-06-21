@@ -1,9 +1,4 @@
-FROM golang:1.17-alpine
-
+FROM scratch
+COPY main /app
 WORKDIR /app
-
-COPY . .
-
-RUN go build -o main .
-
 CMD ["./main"]
